@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Grupo Diagonal · Resultado de Vendas · Set/2026</title>
+<style>
+:root{--bg:#edf3ef;--card:#fff;--ink:#0d2219;--ink2:#46594f;--mut:#7f9086;--line:#e0e9e3;--real:#0d5c43;--meta:#b9cbc1;--good:#0f7a4c;--goodbg:#dff2e7;--bad:#c2312d;--badbg:#fdeceb;--warn:#9a6700;--warnbg:#fff4d6;--navy:#06281f}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:520px;margin:0 auto;padding-bottom:40px}
+header{background:linear-gradient(160deg,#031b14,#0d5c43);color:#fff;padding:22px 18px 62px;padding-top:max(22px,env(safe-area-inset-top))}
+header .mode{display:flex;align-items:center;gap:6px;margin-top:14px;font-size:12px}header .mode span{opacity:.8;margin-right:2px}header .mode button{border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;padding:6px 15px;border-radius:99px;font:600 12.5px inherit;font-family:inherit;cursor:pointer}header .mode button.on{background:#fff;color:#06281f;border-color:#fff}
+header small{opacity:.7;letter-spacing:.08em;text-transform:uppercase;font-size:11px}
+header h1{margin:4px 0 0;font-size:21px;line-height:1.2}
+header p{margin:6px 0 0;opacity:.75;font-size:12.5px}
+.tabs{position:sticky;top:0;z-index:10;display:flex;gap:4px;background:rgba(237,243,239,.95);backdrop-filter:blur(8px);padding:8px 14px;margin-top:-46px}
+.tabs button{flex:1;border:0;background:#fff;color:var(--ink2);padding:11px 4px;border-radius:12px;font:600 13.5px inherit;font-family:inherit;box-shadow:0 1px 3px rgba(15,27,45,.12);cursor:pointer}
+.tabs button.on{background:var(--navy);color:#fff}
+section{display:none;padding:6px 14px}section.on{display:block}
+.card{background:var(--card);border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 1px 2px rgba(15,27,45,.06),0 4px 14px rgba(15,27,45,.04)}
+.card h2{margin:0 0 2px;font-size:15px}
+.sub{color:var(--mut);font-size:12px;margin:0 0 10px}
+.hero{display:flex;align-items:center;gap:14px}
+.ring{flex:0 0 112px}
+.big{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.pill{display:inline-flex;align-items:center;gap:5px;font-weight:700;font-size:12.5px;padding:4px 10px;border-radius:99px;margin-top:8px}
+.pill.g{background:var(--goodbg);color:var(--good)}.pill.b{background:var(--badbg);color:var(--bad)}.pill.w{background:var(--warnbg);color:var(--warn)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.kpi{background:#f1f7f3;border-radius:14px;padding:11px 12px}
+.kpi span{display:block;color:var(--mut);font-size:11.5px}
+.kpi b{font-size:16.5px;letter-spacing:-.01em}
+.kpi.g b{color:var(--good)}.kpi.b b{color:var(--bad)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--ink2);margin:2px 0 8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.alert{border-radius:14px;padding:12px 13px;font-size:13px;margin:12px 0;display:flex;gap:10px}
+.alert.w{background:var(--warnbg);color:#5c4000}.alert.i{background:#dcece3;color:#0a3b2b}
+.alert b{display:block;margin-bottom:2px}
+.switch{display:flex;background:#e3ede7;border-radius:12px;padding:3px;margin-top:10px}
+.switch button{flex:1;border:0;background:none;padding:9px 6px;border-radius:10px;font:600 12.5px inherit;font-family:inherit;color:var(--ink2)}
+.switch button.on{background:var(--navy);color:#fff;box-shadow:0 1px 3px rgba(15,27,45,.15)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:inherit}
+.row{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:9px 0;border-top:1px solid var(--line);font-size:13px}
+.row:first-of-type{border-top:0}
+.row .nm{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .vl{font-weight:700;text-align:right}.row .vl.g{color:var(--good)}.row .vl.b{color:var(--bad)}
+.row .bar{grid-column:1/-1;height:7px;background:#e3ede7;border-radius:4px;position:relative;margin-top:3px;overflow:visible}
+.row .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--real)}
+.row .bar u{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);left:66.6%}
+.row .det{grid-column:1/-1;color:var(--mut);font-size:11.5px}
+h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:14px 0 2px}
+.exec p{margin:0 0 10px;font-size:14px}
+.exec .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;margin-right:6px;vertical-align:1px}
+.tag.g{background:var(--goodbg);color:var(--good)}.tag.b{background:var(--badbg);color:var(--bad)}.tag.n{background:#dcece3;color:#0a3b2b}.tag.w{background:var(--warnbg);color:var(--warn)}
+ol.rec{margin:0;padding-left:20px;font-size:13.5px}ol.rec li{margin-bottom:9px}
+details summary{cursor:pointer;font-weight:700;font-size:14px}
+table{width:100%;border-collapse:collapse;font-size:11.5px;margin-top:10px}
+th,td{padding:6px 4px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}
+th{color:var(--mut);font-weight:600}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.chips button{border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 13px;font:600 12.5px inherit;font-family:inherit;color:var(--ink2)}.chips button.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.co{display:grid;grid-template-columns:1fr auto;gap:2px 8px;padding:11px 0;border-top:1px solid var(--line);cursor:pointer}.co:first-of-type{border-top:0}.co .nm{font-weight:700}.co .det{grid-column:1/-1;color:var(--mut);font-size:11.5px}.co .bar{grid-column:1/-1;height:7px;background:#e3ede7;border-radius:4px;position:relative;margin-top:3px}.co .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:var(--real)}.co .bar u{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);left:66.6%}.co.sel .nm:after{content:" ●";color:var(--real);font-size:10px}
+#tip{position:fixed;z-index:50;background:var(--navy);color:#fff;padding:8px 11px;border-radius:10px;font-size:12px;pointer-events:none;opacity:0;transition:opacity .12s;max-width:230px;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+footer{color:var(--mut);font-size:11px;text-align:center;padding:14px 20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<small>Resumo executivo · Diretoria</small>
+<h1>Grupo Diagonal — Resultado de Vendas</h1>
+<p>Outubro/2026 · base posição 11/11/2026 · VGV em R$</p>
+<div class="mode"><span>Analisar sobre:</span><button data-mode="desafio" class="on">Desafio</button><button data-mode="meta">Meta</button></div>
+</header>
+<div class="tabs" role="tablist">
+<button class="on" data-t="mes">Mês</button><button data-t="acu">Acumulado</button><button data-t="est">Estoque</button><button data-t="ana">Análise</button>
+</div>
+<section id="mes" class="on"></section>
+<section id="acu"></section>
+<section id="est"></section>
+<section id="ana"></section>
+<footer id="foot">Fonte: planilha “RESULTADO POSIÇÃO OUTUBRO 11.11.2026” (abas META MÊS OUTUBRO, DEAFIO ATÉ OUTUBRO, DESAFIO ANO e ESTOQUE NOVEMBRO). Desafio = “Meta Desafio” da planilha. Atingimento = VGV realizado ÷ desafio.</footer>
+</div>
+<div id="tip"></div>
+<script>
+const RAW={"mes": [{"e": "DIAGONAL", "l": "DIAGONAL", "n": "FLOW CUMBUCO CONDOMINIUM", "v": 14711500.65, "m": 0, "mm": 0, "u": 28, "mu": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "CONNECT BEIRA MAR", "v": 439910.87, "m": 0, "mm": 0, "u": 1, "mu": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN CUMBUCO - PRECO FECHADO", "v": 0, "m": 0, "mm": 0, "u": 0, "mu": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "DIAGONAL BY PININFARINA", "v": 0, "m": 9233395.03, "mm": 9233395.04, "u": 0, "mu": 1}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN CUMBUCO", "v": 4599540.59, "m": 3235076.38, "mm": 3235076.38, "u": 3, "mu": 2}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "IMOVEIS AVULSOS", "v": 0, "m": 193000, "mm": 193000, "u": 0, "mu": 1}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "ICON CONDOMINIUM", "v": 0, "m": 0.0, "mm": 0, "u": 0, "mu": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN", "v": 0, "m": 0.0, "mm": 0, "u": 0, "mu": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "Q TOWER CONDOMINIUM", "v": 5250000, "m": 16559507.51, "mm": 16559507.51, "u": 1, "mu": 3}, {"e": "DIAGONAL INC", "l": "INC", "n": "INC PULSE PARQUELANDIA", "v": 930722.24, "m": 4880700, "mm": 4880700, "u": 2, "mu": 11}, {"e": "DIAGONAL INC", "l": "INC", "n": "INC GREEN CAMBEBA", "v": 3722444.15, "m": 6853910, "mm": 4895650, "u": 7, "mu": 10}, {"e": "VICTA", "l": "VIVER", "n": "HYPE CONDOMINIO CLUBE", "v": 6557278.0, "m": 7452000, "mm": 13750528.68, "u": 21, "mu": 47}, {"e": "VICTA", "l": "VIVER", "n": "VIVER ESSENCIAL CONDOMINIO CLUBE", "v": 4611719.79, "m": 5522000, "mm": 5492055.4, "u": 18, "mu": 20}, {"e": "VICTA", "l": "VIVER", "n": "CONDOMINIO VIVER BOSQUE SOLAR DOS DIOGOS", "v": 1027129.46, "m": 10070000, "mm": 4613800, "u": 4, "mu": 17}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA MARACANAU", "v": 3466944.16, "m": 6110580, "mm": 3004274.91, "u": 16, "mu": 13}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA ACACIA", "v": 832780.2, "m": 0, "mm": 0, "u": 4, "mu": 0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA SENNA", "v": 218187.99, "m": 0, "mm": 0, "u": 1, "mu": 0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA MONDUBIM", "v": 0, "m": 0.0, "mm": 0, "u": 0, "mu": 0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA EUSEBIO", "v": 2455157.21, "m": 4035011, "mm": 5332980.9, "u": 12, "mu": 26}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA IRIS", "v": 2334474.91, "m": 7382760, "mm": 4397406.93, "u": 9, "mu": 19}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA JASMIM", "v": 3902452.1, "m": 5625000, "mm": 6048000, "u": 18, "mu": 28}, {"e": "VICTA", "l": "VISTA", "n": "VISTA PARQUE CONDOMINIO CLUBE", "v": 0, "m": 3450000, "mm": 414689.5, "u": 0, "mu": 1}, {"e": "VICTA", "l": "VISTA", "n": "VISTA COSTEIRA CUMBUCO", "v": 5287367.96, "m": 0, "mm": 1535575.44, "u": 14, "mu": 4}, {"e": "VICTA", "l": "VISTA", "n": "VISTA MAR CONDOMINIO CLUBE", "v": 412478.79, "m": 0, "mm": 0, "u": 1, "mu": 0}, {"e": "VICTA", "l": "VISTA", "n": "JOQUEI CONDOMINIO CLUBE", "v": 6030059.24, "m": 5040399, "mm": 4568585.23, "u": 15, "mu": 11}, {"e": "VICTA", "l": "VISTA", "n": "ATLANTICO CONDOMINIO CLUBE", "v": 6943910.96, "m": 5856732.63, "mm": 5710499.2, "u": 16, "mu": 14}, {"e": "VICTA", "l": "VISTA", "n": "VISTA COQUEIRAL", "v": 2176907.36, "m": 5505598, "mm": 2874187.5, "u": 5, "mu": 10}, {"e": "VICTA", "l": "VISTA", "n": "AQUIRAZ (PRAINHA 2)", "v": 0, "m": 14541000, "mm": 0, "u": 0, "mu": 0}], "acu": [{"e": "DIAGONAL", "l": "DIAGONAL", "n": "FLOW CUMBUCO CONDOMINIUM", "v": 91581716.67, "m": 0, "u": 165, "mu": 0, "mm": 0, "ma": 13440000, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "CONNECT BEIRA MAR", "v": 6364870.87, "m": 0, "u": 12, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "REAL ESTATE", "v": 570000, "m": 0, "u": 5, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "PRISMA RESIDENCIAL CLUBE", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "VIVENDAS JOQUEI VILLE", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "SOLAR PRACA PORTUGAL", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "LEGACY CONDOMINIUM", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "EPIC CONDOMINIUM", "v": 0, "m": 0, "u": 1, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "FORTIM VILLAS", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "FORTIM ECO VILLAGE", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "IVENS MONUMENTAL", "v": 0, "m": 0, "u": 1, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "D HEALTH MEDICAL COMPLEX", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "STAND DE VENDAS", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN CUMBUCO - PRECO FECHADO", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "DIAGONAL BY PININFARINA", "v": 18442414.1, "m": 18466790.07, "u": 2, "mu": 2, "mm": 18466790.07, "ma": 18466790.07, "mma": 18466790.07}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN CUMBUCO", "v": 29412569.47, "m": 32350763.78, "u": 18, "mu": 20, "mm": 32350763.78, "ma": 38820916.53, "mma": 38820916.53}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "EDGE CONDOMINIUM", "v": 10700000, "m": 14359682.64, "u": 2, "mu": 2, "mm": 14359682.64, "ma": 14359682.64, "mma": 14359682.64}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "IMOVEIS AVULSOS", "v": 0, "m": 4079000, "u": 0, "mu": 4, "mm": 4079000, "ma": 4465000, "mma": 4465000}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "ICON CONDOMINIUM", "v": 0, "m": 4366468.71, "u": 0, "mu": 1, "mm": 4366468.71, "ma": 4366468.71, "mma": 4366468.71}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN", "v": 5700000, "m": 12352643.2, "u": 2, "mu": 4, "mm": 12352643.2, "ma": 15440803.99, "mma": 15440803.99}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "Q TOWER CONDOMINIUM", "v": 135907952.12, "m": 165595075.09, "u": 28, "mu": 30, "mm": 165595075.09, "ma": 198714090.11, "mma": 198714090.11}, {"e": "DIAGONAL INC", "l": "INC", "n": "INC PULSE PARQUELANDIA", "v": 25826955.76, "m": 24847200, "u": 53, "mu": 56, "mm": 16596986.38, "ma": 32833800, "mma": 23717176.63}, {"e": "DIAGONAL INC", "l": "INC", "n": "INC GREEN CAMBEBA", "v": 43347494.96, "m": 57768670, "u": 83, "mu": 118, "mm": 38587278.62, "ma": 67559970, "mma": 48801288.37}, {"e": "VICTA", "l": "VIVER", "n": "HYPE CONDOMINIO CLUBE", "v": 69024627.4, "m": 39192000, "u": 242, "mu": 142, "mm": 16008000, "ma": 54096000, "mma": 31464000}, {"e": "VICTA", "l": "VIVER", "n": "VIVER ESSENCIAL CONDOMINIO CLUBE", "v": 56747152.19, "m": 44929000, "u": 226, "mu": 179, "mm": 28112000, "ma": 55973000, "mma": 39156000}, {"e": "VICTA", "l": "VIVER", "n": "ALTA VISTA PASSARE", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "VICTA", "l": "VIVER", "n": "CONDOMINIO VIVER BOSQUE SOLAR DOS DIOGOS", "v": 3418509.58, "m": 10070000, "u": 13, "mu": 38, "mm": 0, "ma": 29945000, "mma": 7420000}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA MARACANAU", "v": 71933040.07, "m": 59796390, "u": 334, "mu": 274, "mm": 59578155.0, "ma": 71799315, "mma": 71799315.0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA ACACIA", "v": 15506992.44, "m": 8766948, "u": 73, "mu": 41, "mm": 8766948, "ma": 8766948, "mma": 8766948}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA SENNA", "v": 4346510.56, "m": 834000, "u": 20, "mu": 4, "mm": 834000, "ma": 834000, "mma": 834000}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA MONDUBIM", "v": 225367.99, "m": 220511.21, "u": 1, "mu": 1, "mm": 220511.21, "ma": 220511.21, "mma": 220511.21}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA CAUCAIA", "v": 0, "m": 0, "u": 0, "mu": 0, "mm": 0, "ma": 0, "mma": 0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA EUSEBIO", "v": 63537544.25, "m": 67108604, "u": 300, "mu": 316, "mm": 67320973.0, "ma": 67108604, "mma": 67320973.0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA IRIS", "v": 61688962.81, "m": 73827600, "u": 269, "mu": 330, "mm": 71590400.0, "ma": 84789880, "mma": 85013600.0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA JASMIM", "v": 21733649.13, "m": 35100000, "u": 101, "mu": 156, "mm": 17550000, "ma": 48600000, "mma": 29025000}, {"e": "VICTA", "l": "VISTA", "n": "VISTA PARQUE CONDOMINIO CLUBE", "v": 40002262.11, "m": 34500000, "u": 119, "mu": 100, "mm": 34500000.0, "ma": 41400000, "mma": 41400000.0}, {"e": "VICTA", "l": "VISTA", "n": "VISTA COSTEIRA CUMBUCO", "v": 31504051.37, "m": 27595596, "u": 85, "mu": 84, "mm": 27924115.0, "ma": 27595596, "mma": 27924115.0}, {"e": "VICTA", "l": "VISTA", "n": "VISTA MAR CONDOMINIO CLUBE", "v": 7039040.91, "m": 5580000, "u": 19, "mu": 15, "mm": 5580000, "ma": 5580000, "mma": 5580000}, {"e": "VICTA", "l": "VISTA", "n": "JOQUEI CONDOMINIO CLUBE", "v": 51546944.54, "m": 50403990, "u": 134, "mu": 130, "mm": 48853098.0, "ma": 58933896, "mma": 58933896.0}, {"e": "VICTA", "l": "VISTA", "n": "BELVEDERE CONDOMINIO CLUBE", "v": 5530867.97, "m": 4480000, "u": 16, "mu": 14, "mm": 4480000, "ma": 4480000, "mma": 4480000}, {"e": "VICTA", "l": "VISTA", "n": "MIRANTE CONDOMINIO CLUBE", "v": 370000, "m": 354999, "u": 1, "mu": 1, "mm": 354999, "ma": 354999, "mma": 354999}, {"e": "VICTA", "l": "VISTA", "n": "ATLANTICO CONDOMINIO CLUBE", "v": 47137270.62, "m": 58567326.32, "u": 118, "mu": 160, "mm": 54906868.43, "ma": 70280791.59, "mma": 65888242.11}, {"e": "VICTA", "l": "VISTA", "n": "VISTA COQUEIRAL", "v": 39108915.81, "m": 57415522, "u": 93, "mu": 146, "mm": 55842494.0, "ma": 68426718, "mma": 66067176.0}, {"e": "VICTA", "l": "VISTA", "n": "AQUIRAZ (PRAINHA 2)", "v": 0, "m": 43623000, "u": 0, "mu": 111, "mm": 11790000, "ma": 71919000, "mma": 35370000}], "est": [{"e": "DIAGONAL", "l": "DIAGONAL", "n": "IMOVEIS AVULSOS", "ut": 4, "ud": 4, "vg": 12310000.9}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "ICON CONDOMINIUM", "ut": 24, "ud": 1, "vg": 4630387.84}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "EDGE CONDOMINIUM", "ut": 37, "ud": 0, "vg": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "DIAGONAL BY PININFARINA", "ut": 47, "ud": 4, "vg": 44527653.14}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "Q TOWER CONDOMINIUM", "ut": 141, "ud": 43, "vg": 246121099.39}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN CUMBUCO", "ut": 160, "ud": 42, "vg": 73100759.36}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "OCEAN GARDEN", "ut": 170, "ud": 7, "vg": 22979515.33}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "CONNECT BEIRA MAR", "ut": 299, "ud": 0, "vg": 0}, {"e": "DIAGONAL", "l": "DIAGONAL", "n": "FLOW CUMBUCO CONDOMINIUM", "ut": 360, "ud": 106, "vg": 55975897.35}, {"e": "DIAGONAL INC", "l": "INC", "n": "INC PULSE PARQUELANDIA", "ut": 140, "ud": 87, "vg": 42583014.26}, {"e": "DIAGONAL INC", "l": "INC", "n": "INC GREEN CAMBEBA", "ut": 260, "ud": 146, "vg": 76711013.38}, {"e": "VICTA", "l": "VISTA", "n": "VISTA COQUEIRAL", "ut": 216, "ud": 85, "vg": 37779235.04}, {"e": "VICTA", "l": "VISTA", "n": "VISTA COSTEIRA CUMBUCO", "ut": 240, "ud": 0, "vg": 0}, {"e": "VICTA", "l": "VISTA", "n": "VISTA PARQUE CONDOMINIO CLUBE", "ut": 268, "ud": 0, "vg": 0}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA ACACIA", "ut": 280, "ud": 1, "vg": 222913.33}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA SENNA", "ut": 280, "ud": 3, "vg": 686070}, {"e": "VICTA", "l": "VISTA", "n": "ATLANTICO CONDOMINIO CLUBE", "ut": 322, "ud": 85, "vg": 34868670.7}, {"e": "VICTA", "l": "VIVER", "n": "CONDOMINIO VIVER BOSQUE SOLAR DOS DIOGOS", "ut": 348, "ud": 335, "vg": 88805650.0}, {"e": "VICTA", "l": "VISTA", "n": "JOQUEI CONDOMINIO CLUBE", "ut": 356, "ud": 8, "vg": 3485617.92}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA MARACANAU", "ut": 448, "ud": 54, "vg": 12743351.02}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA IRIS", "ut": 520, "ud": 176, "vg": 41488332.09}, {"e": "VICTA", "l": "VIVER", "n": "VIVER ESSENCIAL CONDOMINIO CLUBE", "ut": 528, "ud": 328, "vg": 84293610.29}, {"e": "VICTA", "l": "VIVER", "n": "HYPE CONDOMINIO CLUBE", "ut": 534, "ud": 300, "vg": 89103978.72}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA EUSEBIO", "ut": 592, "ud": 64, "vg": 13890841.99}, {"e": "VICTA", "l": "VITORIA", "n": "VITORIA JASMIM", "ut": 620, "ud": 527, "vg": 114822009.9}]};
+const $=s=>document.querySelector(s);
+const nf=new Intl.NumberFormat('pt-BR');
+const R=v=>'R$ '+nf.format(Math.round(v));
+const M=(v,d=1)=>{const a=Math.abs(v),s=v<0?'−':'';return s+'R$ '+(a>=1e6?(a/1e6).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})+' mi':a>=1e3?nf.format(Math.round(a/1e3))+' mil':nf.format(Math.round(a)))};
+const SM=v=>(v>0?'+':v<0?'':'')+M(v);
+const P=(v,d=1)=>v.toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d})+'%';
+const SP=v=>(v>0?'+':v<0?'−':'')+P(Math.abs(v));
+const EMP={'VICTA':'Victa','DIAGONAL INC':'Diagonal Inc','DIAGONAL':'Diagonal'};
+const sum=(a,f)=>a.reduce((s,x)=>s+f(x),0);
+let adjust=false,flow=true,emp='GRUPO',mode='desafio';
+const lab=k=>EMP[k]||(k.includes('BOSQUE SOLAR')?'Bosque Solar dos Diogos':(k.length>26?k.slice(0,25)+'…':k).toLowerCase().replace(/(^|\s|\()\S/g,c=>c.toUpperCase()));
+const isAq=x=>x.n.startsWith('AQUIRAZ');
+const reason=x=>x.n.startsWith('FLOW CUMBUCO')?'lançamento antecipado, sem desafio no mês':x.n.startsWith('CONDOMINIO VIVER BOSQUE')?'lançamento antecipado; desafio a partir de outubro':x.n.startsWith('CONNECT BEIRA')?'sem desafio: já estava 100% vendido no início e as unidades retornaram':'';
+const isFlow=x=>x.n.startsWith('FLOW CUMBUCO');
+
+function data(k){
+  let d=RAW[k].map(x=>({...x,m:mode==='meta'?x.mm:x.m,ma:mode==='meta'?(x.mma||0):(x.ma||0)}));
+  if(k==='acu'&&adjust){
+    const mm={};RAW.mes.forEach(x=>mm[x.n]=x.v);
+    d.forEach(x=>{if(x.e==='DIAGONAL')x.v=mm[x.n]||0});
+  }
+  if(!flow)d=d.filter(x=>!isFlow(x));
+  return d;
+}
+function agg(d,key='e'){
+  const v=sum(d,x=>x.v),m=sum(d,x=>x.m);
+  const wm=d.filter(x=>x.m>0),vw=sum(wm,x=>x.v),mw=sum(wm,x=>x.m);
+  const nm=d.filter(x=>x.m===0&&x.v>0);
+  const by={};if(key==='e')['VICTA','DIAGONAL INC','DIAGONAL'].forEach(k=>by[k]={v:0,m:0,u:0,mu:0});
+  d.forEach(x=>{const b=by[x[key]]=by[x[key]]||{v:0,m:0,u:0,mu:0};b.v+=x.v;b.m+=x.m;b.u+=x.u;b.mu+=x.mu});
+  return {ma:sum(d,x=>x.ma||0),v,m,gap:v-m,pct:m?v/m*100:0,gp:m?(v-m)/m*100:0,vw,mw,pw:mw?vw/mw*100:0,nm,vnm:sum(nm,x=>x.v),by,u:sum(d,x=>x.u),mu:sum(d,x=>x.mu)};
+}
+const tone=p=>p>=100?'g':p>=80?'w':'b';
+const icon=p=>p>=100?'▲':'▼';
+
+/* ---------- charts ---------- */
+function ring(p){
+  const r=46,c=2*Math.PI*r,f=Math.min(p,100)/100*c,col=p>=100?'var(--good)':p>=80?'#d19a00':'var(--bad)';
+  return `<svg viewBox="0 0 112 112" role="img" aria-label="Atingimento ${P(p)}"><circle cx="56" cy="56" r="${r}" fill="none" stroke="#dbe8e0" stroke-width="12"/><circle cx="56" cy="56" r="${r}" fill="none" stroke="${col}" stroke-width="12" stroke-linecap="round" stroke-dasharray="${f} ${c}" transform="rotate(-90 56 56)"/><text x="56" y="61" text-anchor="middle" font-size="20" font-weight="800" fill="#0d2219">${P(p,0)}</text></svg>`;
+}
+function compare(a){ // realizado x desafio, 2 barras horizontais
+  const mx=Math.max(a.v,a.m)*1.0,W=300;
+  const w=x=>Math.max(2,x/mx*(W-70));
+  return `<svg viewBox="0 0 ${W} 92" role="img" aria-label="Realizado ${M(a.v)} versus desafio ${M(a.m)}">
+  <text x="0" y="12" font-size="11" fill="#46594f">Realizado</text>
+  <rect class="tp" data-t="Realizado: ${R(a.v)}" x="0" y="18" width="${w(a.v)}" height="22" rx="4" fill="var(--real)"/>
+  <text x="${w(a.v)+6}" y="34" font-size="12" font-weight="700" fill="#0d2219">${M(a.v)}</text>
+  <text x="0" y="58" font-size="11" fill="#46594f">Desafio</text>
+  <rect class="tp" data-t="Desafio: ${R(a.m)}" x="0" y="64" width="${w(a.m)}" height="22" rx="4" fill="var(--meta)"/>
+  <text x="${w(a.m)+6}" y="80" font-size="12" font-weight="700" fill="#0d2219">${M(a.m)}</text></svg>`;
+}
+function byEmp(a){
+  const keys=Object.keys(a.by).filter(k=>a.by[k].v||a.by[k].m),mx=Math.max(1,...keys.map(k=>Math.max(a.by[k].v,a.by[k].m))),W=300,H=keys.length*62;
+  const w=x=>Math.max(2,x/mx*(W-78));
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Realizado e desafio por item">`+keys.map((k,i)=>{
+    const b=a.by[k],y=i*62,p=b.m?b.v/b.m*100:null;
+    return `<text x="0" y="${y+11}" font-size="12" font-weight="700" fill="#0d2219">${lab(k)}</text>
+    <text x="${W}" y="${y+11}" text-anchor="end" font-size="12" font-weight="700" fill="${p==null?'#7f9086':p>=100?'#0f7a4c':p>=80?'#9a6700':'#c2312d'}">${p==null?'s/ desafio':P(p,0)}</text>
+    <rect class="tp" data-t="${lab(k)} · Realizado: ${R(b.v)}" x="0" y="${y+17}" width="${w(b.v)}" height="15" rx="3" fill="var(--real)"/>
+    <text x="${w(b.v)+5}" y="${y+29}" font-size="11" fill="#46594f">${M(b.v)}</text>
+    <rect class="tp" data-t="${lab(k)} · Desafio: ${R(b.m)}" x="0" y="${y+36}" width="${w(b.m)}" height="15" rx="3" fill="var(--meta)"/>
+    <text x="${w(b.m)+5}" y="${y+48}" font-size="11" fill="#46594f">${M(b.m)}</text>`}).join('')+`</svg>`;
+}
+function waterfall(a){ // desafio -> variação por empresa -> realizado (evolução do gap)
+  const keys=Object.keys(a.by).filter(k=>a.by[k].v||a.by[k].m),steps=[{l:'Desafio',v:a.m,t:'tot'}];
+  keys.forEach(k=>steps.push({l:lab(k).slice(0,9),v:a.by[k].v-a.by[k].m,t:'d'}));
+  steps.push({l:'Realizado',v:a.v,t:'tot'});
+  const W=300,H=150,pad=22,mx=Math.max(a.m,a.v,a.m+Math.max(0,...keys.map(k=>a.by[k].v-a.by[k].m)))*1.12,
+    y=v=>H-pad-v/mx*(H-pad-14),bw=Math.min(40,(W-10)/(steps.length*1.5)),gap=(W-bw*steps.length)/(steps.length-1);
+  let run=0,out='';
+  steps.forEach((s,i)=>{
+    const x=i*(bw+gap);let top,bot,col;
+    if(s.t==='tot'){top=s.v;bot=0;run=s.v;col=i?'var(--real)':'var(--meta)'}
+    else{const a0=run,a1=run+s.v;top=Math.max(a0,a1);bot=Math.min(a0,a1);run=a1;col=s.v>=0?'var(--good)':'var(--bad)'}
+    out+=`<rect class="tp" data-t="${s.l}: ${s.t==='tot'?R(s.v):SM(s.v)}" x="${x}" y="${y(top)}" width="${bw}" height="${Math.max(2,y(bot)-y(top))}" rx="3" fill="${col}"/>
+    <text x="${x+bw/2}" y="${y(top)-4}" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0d2219">${s.t==='tot'?M(s.v,0):(s.v>0?'+':'')+M(s.v,1).replace('R$ ','')}</text>
+    <text x="${x+bw/2}" y="${H-6}" text-anchor="middle" font-size="10" fill="#46594f">${s.l}</text>`});
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Ponte do desafio ao realizado">${out}<line x1="0" x2="${W}" y1="${y(0)}" y2="${y(0)}" stroke="#e0e9e3"/></svg>`;
+}
+function projRows(list,limit){
+  return list.slice(0,limit).map(x=>{
+    const has=x.m>0,p=has?x.v/x.m*100:null,d=x.v-x.m;
+    return `<div class="row"><div class="nm">${x.n}</div><div class="vl ${has?(d>=0?'g':'b'):''}">${has?SM(d):'s/ desafio'}</div>
+    ${has?`<div class="bar"><i style="width:${Math.min(p,150)/150*100}%"></i><u></u></div>`:''}
+    <div class="det">${isAq(x)?'<b style="color:var(--warn)">⚠ Lançamento atrasado</b> · ':''}${has&&reason(x)?'<span style="color:var(--good);font-weight:600">ℹ '+reason(x)+'</span> · ':''}Realizado ${M(x.v)} · ${has?'Desafio '+M(x.m):'Desafio: '+(reason(x)||'não definida')}${has?` · ${P(p,0)}`:''}</div></div>`}).join('');
+}
+
+/* ---------- renderers ---------- */
+const CH=[['GRUPO','Grupo'],['VICTA','Victa'],['DIAGONAL INC','Diagonal Inc'],['DIAGONAL','Diagonal']];
+function ctl(withEmp){
+  return withEmp?`<div class="card"><h2>Empresa</h2><div class="chips" style="margin-top:6px">${CH.map(c=>`<button class="${emp===c[0]?'on':''}" data-emp="${c[0]}">${c[1]}</button>`).join('')}</div></div>`:'';
+}
+function renderPeriod(k){
+  const dAll=data(k),aAll=agg(dAll);
+  const d=emp==='GRUPO'?dAll:dAll.filter(x=>x.e===emp);
+  const key=emp==='GRUPO'?'e':(new Set(d.filter(x=>x.v||x.m).map(x=>x.l)).size>=2?'l':'n');
+  const a=agg(d,key),t=tone(a.pct),label=k==='mes'?'Outubro':'Acumulado no ano';
+  const who=emp==='GRUPO'?'do Grupo':lab(emp),grp=key==='e'?'empresa':key==='l'?'linha':'empreendimento';
+  const withMeta=d.filter(x=>x.m>0);
+  const best=[...withMeta].sort((x,y)=>(y.v-x.v)),worst=[...withMeta].sort((x,y)=>(x.v-x.m)-(y.v-y.m));
+  const bestS=[...withMeta].sort((x,y)=>(y.v-y.m)-(x.v-x.m));
+  const fl=d.find(isFlow),fV=fl&&k==='mes'?fl.v:0;
+  const dg=emp==='GRUPO'||emp==='DIAGONAL';
+  const warn=(mode==='desafio'&&k==='mes'?`<div class="alert i"><div>ℹ️</div><div><b>Como o desafio do mês é calculado</b>A planilha traz o desafio acumulado até outubro. O desafio do mês é a diferença entre o acumulado até outubro e o acumulado até setembro.</div></div>`:'')+(mode==='meta'&&k==='acu'&&(emp==='GRUPO'||emp==='DIAGONAL INC')?`<div class="alert i"><div>ℹ️</div><div><b>Meta da Diagonal Inc</b>A planilha traz a meta só no total da empresa. Nos empreendimentos (Green Cambeba e Pulse Parquelândia), a meta foi dividida proporcionalmente ao desafio.</div></div>`:'');
+  const ant=dg?d.filter(x=>x.v>0&&x.m===0&&reason(x)):[];
+  const antV=sum(ant,x=>x.v);
+  const nmWarn=ant.length?`<div class="alert i"><div>ℹ️</div><div><b>Vendas sem desafio ${k==='mes'?'no mês':'no acumulado'} — contexto</b>${ant.sort((x,y)=>y.v-x.v).map(x=>`• <b style="display:inline">${x.n.startsWith('CONDOMINIO VIVER BOSQUE')?'Bosque Solar dos Diogos':lab(x.n)}</b> ${M(x.v)}: ${reason(x)}.<br>`).join('')}Sem esses empreendimentos, o atingimento ${emp==='GRUPO'?'do Grupo':'da Diagonal'} seria <b style="display:inline">${P((a.v-antV)/a.m*100)}</b> (${SM(a.v-antV-a.m)}).</div></div>`:'';
+  const aq=d.find(x=>isAq(x)&&x.m>0);
+  const aqWarn=aq?`<div class="alert w"><div>⚠️</div><div><b>Aquiraz (Prainha 2): lançamento atrasado</b>Desafio de ${M(aq.m)} ${k==='mes'?'no mês':'no acumulado'} sem vendas registradas. Desconsiderando esse desafio, o atingimento ${who} seria <b style="display:inline">${P(a.v/(a.m-aq.m+aq.v)*100)}</b>. Reprogramar o desafio conforme a nova data de lançamento.</div></div>`:'';
+  const cos=emp==='GRUPO'?`<div class="card"><h2>Resultado por empresa</h2><p class="sub">Toque para detalhar a empresa</p>${Object.keys(aAll.by).map(e=>{const b=aAll.by[e],p=b.m?b.v/b.m*100:0,df=b.v-b.m;
+    return `<div class="co" data-emp="${e}"><div class="nm">${lab(e)}</div><div class="vl" style="font-weight:700;text-align:right;color:${df>=0?'var(--good)':'var(--bad)'}">${P(p,0)} · ${SM(df)}</div><div class="bar"><i style="width:${Math.min(p,150)/150*100}%"></i><u></u></div><div class="det">Realizado ${M(b.v)} · Desafio ${M(b.m)}</div></div>`}).join('')}</div>`:'';
+  $('#'+k).innerHTML=ctl(true)+`
+  <div class="card">
+   <h2>${k==='mes'?'Resultado '+who+' no mês × Desafio':'Resultado acumulado '+who+' × Desafio'}</h2>
+   <p class="sub">${label} · VGV (R$)${k==='acu'?' · desafio acumulado até outubro':''}</p>
+   <div class="hero"><div class="ring">${ring(a.pct)}</div>
+    <div><div class="big">${M(a.v)}</div><div class="sub" style="margin:2px 0 0">realizado de ${M(a.m)} de desafio</div>
+    <span class="pill ${t}">${icon(a.pct)} ${a.gap>=0?'Acima':'Abaixo'} do desafio ${SP(a.gp)}</span></div></div>
+   <div class="grid">
+    <div class="kpi"><span>Realizado</span><b>${R(a.v)}</b></div>
+    <div class="kpi"><span>${k==='acu'?'Desafio até outubro':'Desafio'}</span><b>${R(a.m)}</b></div>
+    <div class="kpi ${a.gap>=0?'g':'b'}"><span>Realizado − Desafio</span><b>${a.gap>=0?'+':'−'}${R(Math.abs(a.gap))}</b></div>
+    <div class="kpi ${a.gap>=0?'g':'b'}"><span>Atingimento / variação</span><b>${P(a.pct)} · ${SP(a.gp)}</b></div>
+   </div>
+   ${k==='acu'&&a.ma?`<p class="sub" style="margin:12px 0 0">Desafio do ano: <b>${M(a.ma)}</b> · o realizado equivale a <b>${P(a.v/a.ma*100)}</b> do desafio anual.</p>`:''}
+  </div>
+  ${warn}${nmWarn}${aqWarn}${cos}
+  <div class="card"><h2>Realizado × Desafio</h2><p class="sub">Toque nas barras para ver o valor exato</p>
+   <div class="legend"><span><i style="background:var(--real)"></i>Realizado</span><span><i style="background:var(--meta)"></i>Desafio</span></div>${compare(a)}</div>
+  <div class="card"><h2>Por ${grp}</h2><p class="sub">% = atingimento do desafio</p>
+   <div class="legend"><span><i style="background:var(--real)"></i>Realizado</span><span><i style="background:var(--meta)"></i>Desafio</span></div>${byEmp(a)}</div>
+  ${Object.keys(a.by).filter(q=>a.by[q].v||a.by[q].m).length>=2&&Object.keys(a.by).filter(q=>a.by[q].v||a.by[q].m).length<=4?`<div class="card"><h2>Do desafio ao realizado</h2><p class="sub">Contribuição por ${grp} (verde = acima, vermelho = abaixo do desafio)</p>${waterfall(a)}</div>`:''}
+  <div class="card"><h2>Maiores desvios positivos</h2><p class="sub">Empreendimentos com desafio · barra = % do desafio (marca = 100%)</p>${projRows(bestS.filter(x=>x.v>x.m),5)||'<p class="sub">Nenhum acima do desafio.</p>'}
+   <h3>Maiores desvios negativos</h3>${projRows(worst.filter(x=>x.v<x.m),6)}</div>
+  ${k==='mes'&&a.nm.length?`<div class="card"><h2>Vendas sem desafio cadastrado</h2><p class="sub">${M(a.vnm)} no mês</p>${projRows([...a.nm].sort((x,y)=>y.v-x.v),6)}</div>`:''}
+  <div class="card"><details><summary>Ver tabela completa</summary><table><tr><th>Empreendimento</th><th>Realiz.</th><th>Desafio</th><th>%</th></tr>
+   ${[...d].filter(x=>x.v||x.m).sort((x,y)=>y.v-x.v).map(x=>`<tr><td>${x.n}</td><td>${M(x.v)}</td><td>${x.m?M(x.m):'—'}</td><td>${x.m?P(x.v/x.m*100,0):'—'}</td></tr>`).join('')}
+   <tr><th>Total</th><th>${M(a.v)}</th><th>${M(a.m)}</th><th>${P(a.pct,0)}</th></tr></table></details></div>`;
+}
+function renderEst(){
+  const E=(emp==='GRUPO'?RAW.est:RAW.est.filter(x=>x.e===emp)).filter(x=>x.ut);
+  const T={ut:sum(E,x=>x.ut),ud:sum(E,x=>x.ud),vg:sum(E,x=>x.vg)};
+  const by={};E.forEach(x=>{const b=by[x.e]=by[x.e]||{ut:0,ud:0,vg:0};b.ut+=x.ut;b.ud+=x.ud;b.vg+=x.vg});
+  const L=[...E].sort((p,q)=>q.vg-p.vg),mx=Math.max(1,...L.map(x=>x.vg));
+  const who=emp==='GRUPO'?'do Grupo':lab(emp);
+  $('#est').innerHTML=ctl(true)+`
+  <div class="card"><h2>Estoque ${who}</h2><p class="sub">Posição de 11/11/2026 · VGV (R$)</p>
+   <div class="hero"><div class="ring">${ring(T.ud/T.ut*100).replace(/stroke="var\(--bad\)"|stroke="#d19a00"|stroke="var\(--good\)"/g,'stroke="var(--real)"')}</div>
+    <div><div class="big">${M(T.vg)}</div><div class="sub" style="margin:2px 0 0">em VGV disponível para venda</div>
+    <span class="pill g">${nf.format(T.ud)} de ${nf.format(T.ut)} unidades</span></div></div>
+   <div class="grid">
+    <div class="kpi"><span>VGV em estoque</span><b>${R(T.vg)}</b></div>
+    <div class="kpi"><span>Unidades disponíveis</span><b>${nf.format(T.ud)}</b></div>
+    <div class="kpi"><span>% do total disponível</span><b>${P(T.ud/T.ut*100)}</b></div>
+    <div class="kpi"><span>VGV médio por unidade</span><b>${M(T.vg/T.ud,2)}</b></div>
+   </div></div>
+  ${emp==='GRUPO'?`<div class="card"><h2>Por empresa</h2><p class="sub">Toque para detalhar a empresa</p>${Object.keys(by).sort((p,q)=>by[q].vg-by[p].vg).map(e=>{const b=by[e];return `<div class="co" data-emp="${e}"><div class="nm">${lab(e)}</div><div class="vl" style="font-weight:700;text-align:right">${M(b.vg)}</div><div class="bar"><i style="width:${b.vg/T.vg*100}%"></i></div><div class="det">${nf.format(b.ud)} de ${nf.format(b.ut)} unidades disponíveis (${P(b.ud/b.ut*100,0)}) · ${P(b.vg/T.vg*100,0)} do VGV em estoque</div></div>`}).join('')}</div>`:''}
+  <div class="card"><h2>Por empreendimento</h2><p class="sub">Ordenado por VGV em estoque · barra proporcional ao maior</p>
+   ${L.map(x=>`<div class="row"><div class="nm">${lab(x.n)}</div><div class="vl">${M(x.vg)}</div><div class="bar tp" data-t="${lab(x.n)} · ${R(x.vg)}"><i style="width:${x.vg/mx*100}%"></i></div><div class="det">${nf.format(x.ud)} de ${nf.format(x.ut)} unidades disponíveis (${P(x.ud/x.ut*100,0)})${x.ud?' · médio '+M(x.vg/x.ud,2):''}</div></div>`).join('')}</div>`;
+}
+function estCard_unused(){
+  const E=emp==='GRUPO'?RAW.est:RAW.est.filter(x=>x.e===emp);
+  const by={};E.forEach(x=>{const k=emp==='GRUPO'?x.e:x.n;const b=by[k]=by[k]||{ut:0,ud:0,vg:0};b.ut+=x.ut;b.ud+=x.ud;b.vg+=x.vg});
+  const keys=Object.keys(by).sort((p,q)=>by[q].vg-by[p].vg).slice(0,emp==='GRUPO'?3:8);
+  const T={ut:sum(E,x=>x.ut),ud:sum(E,x=>x.ud),vg:sum(E,x=>x.vg)};
+  return `<div class="card"><h2>Estoque disponível</h2><p class="sub">Posição de 11/11/2026 · ${M(T.vg)} em VGV · ${nf.format(T.ud)} de ${nf.format(T.ut)} unidades (${P(T.ud/T.ut*100,0)})</p>`+keys.map(k=>{const b=by[k],p=b.ud/b.ut*100;
+   return `<div class="row"><div class="nm">${lab(k)}</div><div class="vl">${M(b.vg)}</div><div class="bar"><i style="width:${p}%"></i></div><div class="det">${nf.format(b.ud)} de ${nf.format(b.ut)} unidades disponíveis (${P(p,0)})</div></div>`}).join('')+`</div>`;
+}
+function TT(s){return mode==='desafio'?s:s.replace(/desafio/g,'meta').replace(/Desafio/g,'Meta').replace(/\bdo (maior )?meta/g,'da $1meta').replace(/\bno (maior )?meta/g,'na $1meta').replace(/\bao (maior )?meta/g,'à $1meta').replace(/\besse meta/g,'essa meta').replace(/\bo (maior )?meta/g,'a $1meta').replace(/\bDo meta/g,'Da meta').replace(/meta (acumulado|somado|cadastrado)/g,(m,a)=>'meta '+a.slice(0,-1)+'a')}
+function refresh(){renderPeriod('mes');renderPeriod('acu');renderEst();renderAna();
+  ['mes','acu','ana'].forEach(id=>{const e=document.getElementById(id);e.innerHTML=TT(e.innerHTML)});
+  document.querySelectorAll('[data-mode]').forEach(b=>b.classList.toggle('on',b.dataset.mode===mode));
+  $('#foot').innerHTML=`Fonte: planilha “RESULTADO POSIÇÃO OUTUBRO 11.11.2026”. ${mode==='desafio'?'Desafio = “Meta Desafio” (abas DEAFIO ATÉ OUTUBRO e DESAFIO ANO); o desafio do mês é a diferença entre o acumulado até outubro e até setembro.':'Meta = abas META MÊS OUTUBRO, META ATÉ OUTUBRO e META ANO.'} Atingimento = VGV realizado ÷ ${mode==='desafio'?'desafio':'meta'}. Estoque: aba ESTOQUE NOVEMBRO.`;
+  bindTips();bindCtl()}
+function bindCtl(){
+  document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;refresh()});
+  document.querySelectorAll('[data-adj]').forEach(b=>b.onclick=()=>{adjust=b.dataset.adj==='1';refresh()});
+  document.querySelectorAll('[data-flow]').forEach(b=>b.onclick=()=>{flow=b.dataset.flow==='1';refresh()});
+  document.querySelectorAll('[data-emp]').forEach(b=>b.onclick=()=>{emp=b.dataset.emp;refresh();scrollTo({top:0,behavior:'smooth'})});
+}
+
+function renderAna(){
+  const dm=data('mes'),da=data('acu'),am=agg(dm),aa=agg(da);
+  const wm=dm.filter(x=>x.m>0),wa=da.filter(x=>x.m>0);
+  const pos=a=>[...a].sort((x,y)=>(y.v-y.m)-(x.v-x.m)).filter(x=>x.v>x.m).slice(0,3);
+  const neg=a=>[...a].sort((x,y)=>(x.v-x.m)-(y.v-y.m)).filter(x=>x.v<x.m).slice(0,3);
+  const nm=l=>l.map(x=>`${x.n.replace(' CONDOMINIO CLUBE','').replace(' CONDOMINIUM','')} (${SM(x.v-x.m)})`).join(', ');
+  const top=[...dm].sort((x,y)=>y.v-x.v),t1=top[0],t3=sum(top.slice(0,3),x=>x.v);
+  const zero=wm.filter(x=>x.v===0),zeroM=sum(zero,x=>x.m);
+  const fV=sum(dm.filter(isFlow),x=>x.v);
+  const vic=am.by.VICTA,dg=am.by.DIAGONAL,inc=am.by['DIAGONAL INC'];
+  const incA=aa.by['DIAGONAL INC'],vicA=aa.by.VICTA;
+  const jas=da.find(x=>x.n==='VITORIA JASMIM'),jasM=dm.find(x=>x.n==='VITORIA JASMIM');
+  const aq=da.find(x=>x.n.startsWith('AQUIRAZ')),qt=da.find(x=>x.n.startsWith('Q TOWER'));
+  const hyp=dm.find(x=>x.n.startsWith('HYPE'));
+  const tg=p=>p>=100?'g':'b';
+  const antM=sum(dm.filter(x=>x.v>0&&x.m===0&&reason(x)),x=>x.v),antA=sum(da.filter(x=>x.v>0&&x.m===0&&reason(x)),x=>x.v);
+  const nmS=l=>l.map(x=>`${lab(x.n.replace(' CONDOMINIO CLUBE','').replace(' CONDOMINIUM','').replace('CONDOMINIO ',''))} ${SM(x.v-x.m)}`).join(', ');
+  const aqa=da.find(x=>x.n.startsWith('AQUIRAZ')&&x.m>0&&x.v===0),low=Object.keys(aa.by).filter(e=>aa.by[e].m&&aa.by[e].v<aa.by[e].m);
+  $('#ana').innerHTML=`
+  <div class="card exec"><h2>Análise executiva</h2><p class="sub">Resumo automático · outubro/2026</p>
+   <p><span class="tag ${tg(am.pct)}">MÊS</span><b>${P(am.pct)} do desafio</b> (${M(am.v)} de ${M(am.m)}; ${SM(am.gap)}). Sem os empreendimentos sem desafio no mês (${dm.filter(x=>x.v>0&&x.m===0&&reason(x)).map(x=>x.n.includes('BOSQUE')?'Bosque Solar':lab(x.n.replace(' CONDOMINIUM',''))).join(', ')}), seria <b>${P((am.v-antM)/am.m*100)}</b>.</p>
+   <p><span class="tag ${tg(aa.pct)}">ACUMULADO</span><b>${P(aa.pct)} do desafio acumulado</b> (${M(aa.v)} de ${M(aa.m)}; ${SM(aa.gap)}). Sem os empreendimentos sem desafio acumulado, seria <b>${P((aa.v-antA)/aa.m*100)}</b>.</p>
+   <p><span class="tag g">DESTAQUES</span>No mês: ${nmS(pos(wm))}. No acumulado: ${nmS(pos(wa))}.</p>
+   <p><span class="tag b">ATENÇÃO</span>Maiores desvios no mês: ${nmS(neg(wm).slice(0,2))}. ${aqa?`Aquiraz (lançamento atrasado) segue sem vendas, com desafio acumulado de ${M(aqa.m)}. `:''}${low.length?`Abaixo do desafio no acumulado: ${low.map(e=>lab(e)+' '+P(aa.by[e].v/aa.by[e].m*100,0)).join(', ')}.`:'Todas as empresas atingiram o desafio acumulado.'}</p>
+   <p><span class="tag n">CONCENTRAÇÃO</span>${lab(t1.n.replace(' CONDOMINIUM',''))} = ${P(t1.v/am.v*100,0)} do VGV do mês. Estoque em 11/11: ${M(sum(RAW.est,x=>x.vg))} em VGV.</p>
+  </div>`;
+}
+
+/* ---------- ui ---------- */
+refresh();
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===b.dataset.t));
+  scrollTo({top:0,behavior:'smooth'});
+});
+const tip=$('#tip');
+function bindTips(){
+  document.querySelectorAll('.tp').forEach(el=>{
+    const show=e=>{const p=e.touches?e.touches[0]:e;tip.textContent=el.dataset.t;tip.style.opacity=1;
+      tip.style.left=Math.min(innerWidth-240,Math.max(8,p.clientX-60))+'px';tip.style.top=(p.clientY-52)+'px'};
+    el.onmousemove=show;el.onclick=show;el.ontouchstart=show;el.onmouseleave=()=>tip.style.opacity=0;
+  });
+}
+bindTips();
+document.addEventListener('touchend',()=>setTimeout(()=>tip.style.opacity=0,1400));
+</script>
+</body>
+</html>
